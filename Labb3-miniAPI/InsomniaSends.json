@@ -1,0 +1,48 @@
+{
+  //GET /person/1
+  {
+    "id": 1,
+    "name": "Alex",
+    "phoneNr": 739309362,
+    "interests": [
+      {
+        "name": "Skiing",
+        "description": "Go down a hill real fast"
+      }
+    ],
+    "interestLinks": [
+      {
+        "url": "www.freeskier.com"
+      }
+    ]
+  }
+
+
+  //GET /person/all
+  {
+    "id": 1,
+    "name": "Alex"
+  },
+  {
+    "id": 2,
+    "name": "norton"
+  }
+
+
+  //POST /person
+  {
+    "name": "Alex",
+    "phoneNr": "070120120"
+  }
+
+  //POST /person/1/interest
+  {
+    "interestName": "Skiing",
+    "interestDescription": "Go down a hill real fast"
+  }
+
+  //POST /person/1/interest/1
+  {
+    "url": "www.freeskier.com"
+  }
+}
