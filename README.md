@@ -1,6 +1,9 @@
-### **Gets**
-&nbsp; **View all information about a person based on ID**
-##### Get endpoint: /person/1
+### <h1>**Gets**</h1>
+<h2>View all information about a person based on ID</h2>
+
+<p>Get endpoint: /person/1</p>
+
+
 &nbsp; Output:
 ```
 {
