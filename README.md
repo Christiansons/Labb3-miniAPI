@@ -1,31 +1,13 @@
-### <h1>**Gets**</h1>
-<h2>View all information about a person based on ID</h2>
-
-<p>Get endpoint: /person/1</p>
 
 
-&nbsp; Output:
-```
-{
-  "id": 1,
-  "name": "Alex",
-  "phoneNr": 739309362,
-  "interests": [
-    {
-      "name": "Skiing",
-      "description": "Go down a hill real fast"
-    }
-  ],
-  "interestLinks": [
-    {
-      "url": "www.freeskier.com"
-    }
-  ]
-}
-```
-&nbsp; **View all people in the database, retrieves name and id**
-##### Get endpoint: /person/all
-&nbsp; Output:
+<div style:"border: 1px solid black">
+  <h2>GETs</h2>
+
+<h3><b>View all people in the database, retrieves name and id</b></h3>
+
+<h4><b>GET endpoint:</b> /person/all</h4>
+
+example output:
 ```
  {
    "id": 1,
@@ -36,7 +18,43 @@
    "name": "norton"
  }
 ```
-### **Posts**
+
+<h3><b>View all interests for a specific id</b></h3>
+
+<h4><b>GET endpoint:</b> /person/{id}/interests</h4>
+
+Output:
+```
+ [
+	{
+		"interestName": "Skiing",
+		"description": "Go down a hill real fast"
+	},
+	{
+		"interestName": "Cooking",
+		"description": "Making delicious food"
+	}
+]
+```
+
+<h3><b>View all links for a specific id</b></h3>
+
+<h4><b>GET endpoint:</b> /person/{id}/links</h4>
+
+Output:
+```
+ [
+	{
+		"url": "www.freeskier.com"
+	},
+	{
+		"url": "godare.se"
+	}
+]
+```
+
+<h2>POSTs</h2>
+
 &nbsp; **Creates a new person to the database**
 ##### Post endpoint: /person
 &nbsp; Input example:
@@ -47,7 +65,7 @@
 }
 ```
 &nbsp; **Adds a new interest to an existing person**
-##### Post endpoint: /person/1/interest
+##### Post endpoint: /person/{id}/interest
 &nbsp; Input example:
 ```
 {
@@ -55,8 +73,8 @@
   "interestDescription": "Go down a hill real fast"
 }
 ```
-&nbsp; **Adds a website link related to the interest**
-##### Post endpoint: /person/1/interest/1/interestlink
+&nbsp; **Adds a website link related to the interest, and connects the link to a person**
+##### Post endpoint: /person/{id}/interest/{id}/interestlink
 &nbsp; Input example:
 ```
 {
@@ -64,7 +82,7 @@
 }
 ```
 &nbsp; **Links an existing person to an existing interest**
-##### Post endpoint: /person/2/interest/1/
+##### Post endpoint: /person/{id}/interest/{id}/
 &nbsp; No input or output:
 
 
