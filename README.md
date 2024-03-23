@@ -87,4 +87,8 @@ Output:
 
 
 
+<br/>
+<h2>ER diagram</h2>
+
+![er diagram](https://github.com/Christiansons/Labb3-miniAPI/assets/146446656/5c215b15-353a-48b0-b1da-bd10a9038dda)
 
